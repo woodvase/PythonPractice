@@ -1,4 +1,4 @@
-"""CLI interface for pythonpractice_ project.
+"""CLI interface for pythonpractice project.
 
 Be creative! do whatever you want!
 
@@ -12,7 +12,7 @@ Be creative! do whatever you want!
 def main():  # pragma: no cover
     """
     The main function executes on commands:
-    `python -m pythonpractice_` and `$ pythonpractice_ `.
+    `python -m pythonpractice` and `$ pythonpractice `.
 
     This is your program's entry point.
 

@@ -1,6 +1,6 @@
 # How to develop on this project
 
-pythonpractice_ welcomes contributions from the community.
+pythonpractice welcomes contributions from the community.
 
 **You need PYTHON3!**
 

@@ -40,7 +40,7 @@ See also
 - ✅ Code linting using [flake8](https://flake8.pycqa.org/en/latest/)
 - 📊 Code coverage reports using [codecov](https://about.codecov.io/sign-up/)
 - 🛳️ Automatic release to [PyPI](https://pypi.org) using [twine](https://twine.readthedocs.io/en/latest/) and github actions.
-- 🎯 Entry points to execute your program using `python -m <pythonpractice_>` or `$ pythonpractice_` with basic CLI argument parsing.
+- 🎯 Entry points to execute your program using `python -m <pythonpractice>` or `$ pythonpractice` with basic CLI argument parsing.
 - 🔄 Continuous integration using [Github Actions](.github/workflows/) with jobs to lint, test and release your project on Linux, Mac and Windows environments.
 
 > Curious about architectural decisions on this template? read [ABOUT_THIS_TEMPLATE.md](ABOUT_THIS_TEMPLATE.md)  
@@ -51,33 +51,33 @@ See also
 <!--  DELETE THE LINES ABOVE THIS AND WRITE YOUR PROJECT README BELOW -->
 
 ---
-# pythonpractice_
+# pythonpractice
 
 [![codecov](https://codecov.io/gh/woodvase/PythonPractice-/branch/main/graph/badge.svg?token=PythonPractice-_token_here)](https://codecov.io/gh/woodvase/PythonPractice-)
 [![CI](https://github.com/woodvase/PythonPractice-/actions/workflows/main.yml/badge.svg)](https://github.com/woodvase/PythonPractice-/actions/workflows/main.yml)
 
-Awesome pythonpractice_ created by woodvase
+Awesome pythonpractice created by woodvase
 
 ## Install it from PyPI
 
 ```bash
-pip install pythonpractice_
+pip install pythonpractice
 ```
 
 ## Usage
 
 ```py
-from pythonpractice_ import BaseClass
-from pythonpractice_ import base_function
+from pythonpractice import BaseClass
+from pythonpractice import base_function
 
 BaseClass().base_method()
 base_function()
 ```
 
 ```bash
-$ python -m pythonpractice_
+$ python -m pythonpractice
 #or
-$ pythonpractice_
+$ pythonpractice
 ```
 
 ## Development

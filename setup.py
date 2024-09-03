@@ -1,4 +1,4 @@
-"""Python setup.py for pythonpractice_ package"""
+"""Python setup.py for pythonpractice package"""
 import io
 import os
 from setuptools import find_packages, setup
@@ -6,7 +6,7 @@ from setuptools import find_packages, setup
 
 def read(*paths, **kwargs):
     """Read the contents of a text file safely.
-    >>> read("pythonpractice_", "VERSION")
+    >>> read("pythonpractice", "VERSION")
     '0.1.0'
     >>> read("README.md")
     ...
@@ -30,9 +30,9 @@ def read_requirements(path):
 
 
 setup(
-    name="pythonpractice_",
-    version=read("pythonpractice_", "VERSION"),
-    description="Awesome pythonpractice_ created by woodvase",
+    name="pythonpractice",
+    version=read("pythonpractice", "VERSION"),
+    description="Awesome pythonpractice created by woodvase",
     url="https://github.com/woodvase/PythonPractice-/",
     long_description=read("README.md"),
     long_description_content_type="text/markdown",
@@ -40,7 +40,7 @@ setup(
     packages=find_packages(exclude=["tests", ".github"]),
     install_requires=read_requirements("requirements.txt"),
     entry_points={
-        "console_scripts": ["pythonpractice_ = pythonpractice_.__main__:main"]
+        "console_scripts": ["pythonpractice = pythonpractice.__main__:main"]
     },
     extras_require={"test": read_requirements("requirements-test.txt")},
 )

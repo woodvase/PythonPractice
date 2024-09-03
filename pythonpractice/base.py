@@ -1,7 +1,7 @@
 """
-pythonpractice_ base module.
+pythonpractice base module.
 
-This is the principal module of the pythonpractice_ project.
+This is the principal module of the pythonpractice project.
 here you put your main classes and objects.
 
 Be creative! do whatever you want!
@@ -14,4 +14,4 @@ and then choose `flask` as template.
 """
 
 # example constant variable
-NAME = "pythonpractice_"
+NAME = "pythonpractice"

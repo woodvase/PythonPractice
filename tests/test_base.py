@@ -1,5 +1,5 @@
-from pythonpractice_.base import NAME
+from pythonpractice.base import NAME
 
 
 def test_base():
-    assert NAME == "pythonpractice_"
+    assert NAME == "pythonpractice"
