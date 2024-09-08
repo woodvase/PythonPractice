@@ -1,4 +1,4 @@
-'''
+"""
 Return the minimum number of substrings in such a partition.
 
 Note that each character should belong to exactly one substring in a partition.
@@ -18,7 +18,9 @@ Input: s = "ssssss"
 Output: 6
 Explanation:
 The only valid partition is ("s","s","s","s","s","s").
-'''
+"""
+
+
 class Solution:
     def partitionString(self, s: str) -> int:
         p = 0
@@ -30,5 +32,5 @@ class Solution:
                 p += 1
                 sub_set.clear()
             sub_set.add(char)
-        
+
         return p + 1
