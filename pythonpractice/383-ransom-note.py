@@ -1,6 +1,7 @@
 class Solution:
     def canConstruct(self, ransomNote: str, magazine: str) -> bool:
         from collections import Counter
+
         dict1 = Counter(ransomNote)
         dict2 = Counter(magazine)
         for k, v in dict1.items():
