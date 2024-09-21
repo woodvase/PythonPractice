@@ -8,13 +8,12 @@ class Solution:
         while i <= j:
             while j >= 0 and nums[j] == val:
                 j -= 1
-        
-            if i > j: 
+
+            if i > j:
                 break
             if nums[i] != val:
                 i += 1
-            else: 
+            else:
                 nums[i], nums[j] = nums[j], nums[i]
                 j -= 1
         return j + 1
-
