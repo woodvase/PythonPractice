@@ -15,7 +15,6 @@ class Solution:
         self.dfs(startToEndMap, "JFK", ans)
 
         return ans[::-1]
-    
 
     def dfs(self, ticketsMap, start, result):
         # if depart city has flight and the flight can go to another city
@@ -27,11 +26,11 @@ class Solution:
             # 从当前的新出发点开始
             self.dfs(ticketsMap, v, result)  # we start from the new airport
 
-        result.append(start)  # after append, it will back track to last node, thus the result list is in reversed order
+        result.append(
+            start
+        )  # after append, it will back track to last node, thus the result list is in reversed order
 
 
 print(
-    Solution().findItinerary(
-        [["JFK","KUL"],["JFK","NRT"],["NRT","JFK"]]
-    )
+    Solution().findItinerary([["JFK", "KUL"], ["JFK", "NRT"], ["NRT", "JFK"]])
 )
