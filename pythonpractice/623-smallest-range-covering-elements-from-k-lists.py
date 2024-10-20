@@ -12,11 +12,18 @@ class Solution:
             heapq.heappush(pq, (numList[0], listPosition, 0))
         sorted = []
         while pq:
-            n, list_position, n_position  = heapq.heappop(pq)
+            n, list_position, n_position = heapq.heappop(pq)
             sorted.append((n, list_position))
             next_position = n_position + 1
             if next_position < len(nums[list_position]):
-                heapq.heappush(pq, (nums[list_position][next_position], list_position, next_position))
+                heapq.heappush(
+                    pq,
+                    (
+                        nums[list_position][next_position],
+                        list_position,
+                        next_position,
+                    ),
+                )
 
         # Now we need to get the minimim range to have at least one element of all the lists
         # To ensure we have at least one element of all the lists, we use a dictionary to record how many elements contained in the sliding window
