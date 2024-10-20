@@ -17,7 +17,7 @@ class Solution:
             for p in graph[n]:
                 if dist[n] + p[0] < dist[p[1]]:
                     dist[p[1]] = dist[n] + p[0]
-                    pq.append((dist[p[1]], p[1]))
+                    heapq.heappush(pq, (dist[p[1]], p[1]))
         ans = 0
         for d in dist:
             if d == float("inf"):

@@ -6,14 +6,17 @@ from typing import List
 class Solution:
     def smallestRange(self, nums: List[List[int]]) -> List[int]:
         pq = []
-        # Heap sort all the numbers with the list position infomation.
+        # Heap sort all the numbers with the list position infomation. pq max size is len(nums)
         # the list position infomation is used to ensure the range has at least one element for all the lists
         for listPosition, numList in enumerate(nums):
-            for n in numList:
-                heapq.heappush(pq, (n, listPosition))
+            heapq.heappush(pq, (numList[0], listPosition, 0))
         sorted = []
         while pq:
-            sorted.append(heapq.heappop(pq))
+            n, list_position, n_position  = heapq.heappop(pq)
+            sorted.append((n, list_position))
+            next_position = n_position + 1
+            if next_position < len(nums[list_position]):
+                heapq.heappush(pq, (nums[list_position][next_position], list_position, next_position))
 
         # Now we need to get the minimim range to have at least one element of all the lists
         # To ensure we have at least one element of all the lists, we use a dictionary to record how many elements contained in the sliding window
