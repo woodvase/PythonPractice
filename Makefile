@@ -27,7 +27,9 @@ install:          ## Install the project in dev mode.
 .PHONY: fmt
 fmt:              ## Format code using black & isort.
 	$(ENV_PREFIX)isort pythonpractice/
+	$(ENV_PREFIX)isort hubspot/
 	$(ENV_PREFIX)black -l 79 pythonpractice/
+	$(ENV_PREFIX)black -l 79 hubspot/
 	$(ENV_PREFIX)black -l 79 tests/
 
 .PHONY: lint
