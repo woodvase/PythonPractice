@@ -45,10 +45,7 @@ class DataFilter:
         for country, guests in groupby(partners, key=lambda x: x["country"]):
             mappedData[country] = defaultdict(list)
             for guest in guests:
-                availableDates = [
-                    date.fromisoformat(dstr)
-                    for dstr in guest["availableDates"]
-                ]
+                availableDates = [date.fromisoformat(dstr) for dstr in guest["availableDates"]]
                 sortedDates = sorted(availableDates)
                 for i, d in enumerate(sortedDates):
                     if i > 0 and sortedDates[i - 1] == d - timedelta(days=1):
@@ -71,9 +68,7 @@ class DataFilter:
         result = {"countries": []}
 
         for key, value in mappedData.items():
-            sortedDates = sorted(
-                value.items(), key=lambda kv: (-len(kv[1]), kv[0])
-            )
+            sortedDates = sorted(value.items(), key=lambda kv: (-len(kv[1]), kv[0]))
             entry = dict()
             entry["name"] = key
             if len(sortedDates):

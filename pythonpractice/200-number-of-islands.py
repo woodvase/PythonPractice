@@ -21,14 +21,7 @@ class Solution:
                         for r, c in dir:
                             nr = cur[0] + r
                             nc = cur[1] + c
-                            if (
-                                nr >= 0
-                                and nr < row
-                                and nc >= 0
-                                and nc < col
-                                and state[nr][nc] == 0
-                                and grid[nr][nc] == "1"
-                            ):
+                            if nr >= 0 and nr < row and nc >= 0 and nc < col and state[nr][nc] == 0 and grid[nr][nc] == "1":
                                 q.append((nr, nc))
         return ans
 
@@ -48,14 +41,7 @@ class Solution:
 
     def helper(self, r, row, c, col, grid, state):
         dir = [(-1, 0), (1, 0), (0, -1), (0, 1)]
-        if (
-            r < 0
-            or r >= row
-            or c < 0
-            or c >= col
-            or state[r][c] == 1
-            or grid[r][c] != "1"
-        ):
+        if r < 0 or r >= row or c < 0 or c >= col or state[r][c] == 1 or grid[r][c] != "1":
             return
         state[r][c] = 1
         for dr, dc in dir:

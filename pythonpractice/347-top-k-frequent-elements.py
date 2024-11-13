@@ -6,9 +6,7 @@ class Solution:
         from collections import Counter
 
         s = Counter(nums)
-        sorted_by_frequency = sorted(
-            s.items(), key=lambda x: x[1], reverse=True
-        )
+        sorted_by_frequency = sorted(s.items(), key=lambda x: x[1], reverse=True)
         return [x[0] for x in sorted_by_frequency[:k]]
 
 

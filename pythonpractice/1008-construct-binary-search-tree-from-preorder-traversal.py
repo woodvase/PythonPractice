@@ -15,23 +15,13 @@ class Solution:
     def bstFromPreorder(self, preorder: List[int]) -> Optional[TreeNode]:
         return self.helper(preorder, 0, len(preorder) - 1)
 
-    def helper(
-        self, preorder: List[int], start: int, end: int
-    ) -> Optional[TreeNode]:
+    def helper(self, preorder: List[int], start: int, end: int) -> Optional[TreeNode]:
         if start > end:
             return None
         root = TreeNode(preorder[start])
         rightTreeIndex = self.search(preorder, root.val, start, end)
-        root.left = (
-            self.helper(preorder, start + 1, rightTreeIndex - 1)
-            if rightTreeIndex >= 0
-            else self.helper(preorder, start + 1, end)
-        )
-        root.right = (
-            self.helper(preorder, rightTreeIndex, end)
-            if rightTreeIndex >= 0
-            else None
-        )
+        root.left = self.helper(preorder, start + 1, rightTreeIndex - 1) if rightTreeIndex >= 0 else self.helper(preorder, start + 1, end)
+        root.right = self.helper(preorder, rightTreeIndex, end) if rightTreeIndex >= 0 else None
         return root
 
     def search(self, preorder: List[int], val: int, start: int, end: int):

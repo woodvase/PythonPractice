@@ -72,9 +72,7 @@ class CallsFilter:
                         "endTimestamp": int(newEndDatetime.timestamp() * 1000),
                     }
                     result.append(newEntry)
-                    call_start_date = (
-                        newEndDatetime + timedelta(seconds=1)
-                    ).date()
+                    call_start_date = (newEndDatetime + timedelta(seconds=1)).date()
                     callStartTimestamp = (
                         datetime(
                             call_start_date.year,

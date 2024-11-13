@@ -28,15 +28,15 @@ install:          ## Install the project in dev mode.
 fmt:              ## Format code using black & isort.
 	$(ENV_PREFIX)isort pythonpractice/
 	$(ENV_PREFIX)isort hubspot/
-	$(ENV_PREFIX)black -l 79 pythonpractice/
-	$(ENV_PREFIX)black -l 79 hubspot/
-	$(ENV_PREFIX)black -l 79 tests/
+	$(ENV_PREFIX)black -l 150 pythonpractice/
+	$(ENV_PREFIX)black -l 150 hubspot/
+	$(ENV_PREFIX)black -l 150 tests/
 
 .PHONY: lint
 lint:             ## Run pep8, black, mypy linters.
 	$(ENV_PREFIX)flake8 pythonpractice/
-	$(ENV_PREFIX)black -l 79 --check pythonpractice/
-	$(ENV_PREFIX)black -l 79 --check tests/
+	$(ENV_PREFIX)black -l 150 --check pythonpractice/
+	$(ENV_PREFIX)black -l 150 --check tests/
 	$(ENV_PREFIX)mypy --ignore-missing-imports pythonpractice/
 
 .PHONY: test
