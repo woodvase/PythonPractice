@@ -1,4 +1,4 @@
-'''
+"""
 You are given an absolute path for a Unix-style file system, which always begins with a slash '/'. Your task is to transform this absolute path into its simplified canonical path.
 
 The rules of a Unix-style file system are as follows:
@@ -16,7 +16,8 @@ The path must not have any single or double periods ('.' and '..') used to denot
 Return the simplified canonical path.
 
 
-'''
+"""
+
 from collections import deque
 
 
@@ -42,6 +43,7 @@ class Solution:
             p = stk.pop()
             ans = f"/{p}" + ans
         return ans
+
 
 s = Solution()
 print(s.simplifyPath("/.../a/../b/c/../d/./"))

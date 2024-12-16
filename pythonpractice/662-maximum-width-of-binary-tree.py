@@ -8,6 +8,7 @@ from typing import Optional
 
 from pythonpractice.binary_tree_node import TreeNode
 
+
 # Time memory exceeded
 class Solution:
     def widthOfBinaryTree(self, root: Optional[TreeNode]) -> int:
@@ -43,6 +44,7 @@ class Solution:
             return 0
         return 1 + max(self.maxDepth(root.left), self.maxDepth(root.right))
 
+
 class Solution1:
     def widthOfBinaryTree(self, root: Optional[TreeNode]) -> int:
         if not root:
@@ -59,4 +61,3 @@ class Solution1:
                     q.append((node.right, 2 * _index + 2))
             w = max(w, _index - start_index + 1)
         return w
-                 
