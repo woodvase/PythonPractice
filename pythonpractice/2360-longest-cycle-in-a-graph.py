@@ -47,6 +47,7 @@ class Solution:
                 max = c
         return max
 
+
 s = Solution()
 print(s.longestCycle([3, 3, 4, 2, 3]))
 print(s.longestCycle([2, -1, 3, 1]))
